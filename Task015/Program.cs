@@ -1,8 +1,7 @@
 ﻿Console.Clear();
 
 Console.Write("введите число: ");
-string a = Console.ReadLine()!;
-int number = int.Parse(a);
+int number = int.Parse(Console.ReadLine()!);
 
 if ((number == 6) || (number == 7))
     Console.WriteLine("Да, это выходной день");
