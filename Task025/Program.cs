@@ -10,7 +10,7 @@
 Console.Clear();
 
 Console.Write("введите число A: ");
-int a = int.Parse(Console.ReadLine()!);
+double a = double.Parse(Console.ReadLine()!);
 Console.Write("введите натуральное число B: ");
 int b = int.Parse(Console.ReadLine()!);
 
@@ -21,9 +21,9 @@ else
     Console.Write($"{b} - НЕ натуральное число!");
 }
 
-int Power(int a, int b)
+double Power(double a, int b)
 {
-    int res = 1;
+    double res = 1;
     for (int i = 1; i <= b; i++)
     {
         res = res * a;
