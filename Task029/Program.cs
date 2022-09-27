@@ -6,17 +6,18 @@
 // - Внутри функций (кроме функции вывода) НЕЛЬЗЯ использовать класс Console. Только в основном блоке кода или в функции вывода
 
 Console.Clear();
-
-int[] nums = new int[8];
-FillArray(nums);
+int[] nums;
+int length = 8;
+CreateArray(length);
 PrintArray(nums);
 
-void FillArray(int[] array)
+void CreateArray(int length)
 {
+    nums = new int[length];
     Random rand = new Random();    
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < nums.Length; i++)
     {
-        array[i] = rand.Next();
+        nums[i] = rand.Next();
     }
 }
 
