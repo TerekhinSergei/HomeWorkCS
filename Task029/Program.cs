@@ -4,14 +4,14 @@
 // Ограничения:
 // - Должна быть отдельная функция, которая создаёт массив и отдельная функция вывода
 // - Внутри функций (кроме функции вывода) НЕЛЬЗЯ использовать класс Console. Только в основном блоке кода или в функции вывода
-
+////////////
 Console.Clear();
-int[] nums;
+
 int length = 8;
-CreateArray(length);
+int[] nums = CreateArray(length);
 PrintArray(nums);
 
-void CreateArray(int length)
+int[] CreateArray(int length)
 {
     nums = new int[length];
     Random rand = new Random();    
@@ -19,6 +19,7 @@ void CreateArray(int length)
     {
         nums[i] = rand.Next();
     }
+    return nums;
 }
 
 void PrintArray(int[] array)
