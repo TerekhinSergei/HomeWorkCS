@@ -7,20 +7,20 @@
 // 8 4 2 4      ввод 1 , 7 -> такого числа в массиве нет
 
 Console.Clear();
-
-Console.Write("Введите индекс элемента двухмерного массива через запятую (i,j) : ");
-(int, int) result = ParseString (Console.ReadLine()!);
-int i = result.Item1;
-int j = result.Item2;
-
 int[,] array = new int[4, 6];
 FillArray(array);
 PrintArray(array);
 
-if ((i < array.GetLength(0)) && (j < array.GetLength(1))) 
+Console.Write("Введите индекс элемента двухмерного массива через запятую (i,j) : ");
+(int, int) result = ParseString(Console.ReadLine()!);
+int i = result.Item1;
+int j = result.Item2;
+
+
+if (i < array.GetLength(0) && j < array.GetLength(1) &&  i >= 0 && j >= 0) 
     Console.WriteLine($"Элемент с индексом {i},{j} = {array[i, j]}");
 else
-    Console.WriteLine("В массиве нет такого элемента!");        
+    Console.WriteLine("В массиве нет такого элемента!");
 
 void FillArray(int[,] array)
 {
@@ -49,7 +49,7 @@ void PrintArray(int[,] array)
     }
 }
 
-(int, int) ParseString (string str)
+(int, int) ParseString(string str)
 {
     string[] stringArr = str.Split(",");
     int a = int.Parse(stringArr[0]);
