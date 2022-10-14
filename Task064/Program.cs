@@ -5,14 +5,14 @@
 
 Console.Write("Введите целое число больше 1: ");
 int n = int.Parse(Console.ReadLine()!);
-if (n < 1) 
+if (n < 1)
     Console.Write($"{n} меньше 1");
 else
     PrintNumber(n);
 
 void PrintNumber(int n)
-{       
-    if (n == 1) 
+{
+    if (n == 1)
     {
         Console.Write($"{n}.");
         return;
